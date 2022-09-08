@@ -28,7 +28,7 @@ raspberry pi pin mode is BCM
              
              
 <p align="center">
-  <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/rsp.png" width="250" />
+  <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/rsp.png" width="400" />
 
 
 </p>
