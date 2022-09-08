@@ -25,3 +25,10 @@ raspberry pi pin mode is BCM
 
 * BCM pin (26) = Driver pin (LPWM)
              
+             
+             
+<p align="center">
+  <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/rsp3b.jpg" width="250" />
+
+
+</p>
