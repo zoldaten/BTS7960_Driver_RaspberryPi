@@ -1,6 +1,8 @@
 # BTS7960_Driver
 BTS7960 is a  high-power drive full H-bridge driver module with thermal over-current protection
-
+<p aling="center">
+  <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/bts7960.jpg" />
+</p>
 
 # Description
 This is simple explanation on how to use the BTS7960 with the raspberry pi is a very simple task 
