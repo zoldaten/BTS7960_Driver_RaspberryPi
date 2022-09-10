@@ -9,14 +9,14 @@ BTS7960 is a  high-power drive full H-bridge driver module with thermal over-cur
 This is simple explanation on how to use the BTS7960 with the raspberry pi is a very simple task 
 (i'm doing this to simplify your life)
 
-
+In my case i have 2 bts7960 connected to the raspberry pi
 
 # Connection Schematic
 VCC = 5v raspberry pi
 GND = GND raspberry pi
 raspberry pi pin mode is BCM 
 
-* This are the enable pin's 
+## This are the enable pin's 
 
 * BCM pin (20) = Driver pin (R_EN) 
 
