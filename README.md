@@ -16,7 +16,7 @@ VCC = 5v raspberry pi
 GND = GND raspberry pi
 raspberry pi pin mode is BCM 
 
-## This are the enable pin's 
+## This are the pin for Driver 1 
 
 * BCM pin (20) = Driver pin (R_EN) 
 
@@ -28,7 +28,13 @@ raspberry pi pin mode is BCM
 
 * BCM pin (26) = Driver pin (LPWM)
              
-             
+## This are the pin for Driver 2
+
+*
+
+*
+
+*
              
 <p align="center">
   <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/rsp.png" width="400" />
