@@ -4,7 +4,7 @@ import time
 
 class Drivers():
     def __init__(self):
-
+        
         #Enable forward motor on the drivers
         self.D1_R_EN = 20;
         self.D2_R_EN = 13
@@ -23,7 +23,7 @@ class Drivers():
 
 #       Define all parameters for the drivers
         self.GPIO_PARAMETERS();
-
+        
         self.rpwm_D1 = gpio.PWM(self.D1_RPWM, 100)
         self.rpwm_D2 = gpio.PWM(self.D2_RPWM, 100)
 
@@ -78,17 +78,25 @@ class Drivers():
         self.rpwm_D2.ChangeDutyCycle(0)
     
     def Rotate_Right(self):
-        self.lpwm_D1.ChangeDutyCycle(0)
-        self.rpwm_D2.ChangeDutyCycle(100)
-        time.sleep(.5)
-        self.lpwm_D1.ChangeDutyCycle(0)
-        self.rpwm_D2.ChangeDutyCycle(0)
+        for t in range(3):
+            self.lpwm_D1.ChangeDutyCycle(0)
+            self.rpwm_D2.ChangeDutyCycle(100)
+            time.sleep(.35)
+            self.lpwm_D1.ChangeDutyCycle(100)
+            self.rpwm_D2.ChangeDutyCycle(0)
+            time.sleep(.35)
+            self.lpwm_D1.ChangeDutyCycle(0)
     
     
     def Rotate_Left(self):
-        self.rpwm_D1.ChangeDutyCycle(100)
-        time.sleep(.5)
-        self.rpwm_D1.ChangeDutyCycle(0)
+        for t in range(3):
+            
+            self.rpwm_D1.ChangeDutyCycle(100)
+            time.sleep(.35)
+            self.rpwm_D1.ChangeDutyCycle(0)
+            self.lpwm_D2.ChangeDutyCycle(100)
+            time.sleep(.35)
+            self.lpwm_D2.ChangeDutyCycle(0)
 
     def Backward(self):
         self.lpwm_D1.ChangeDutyCycle(100)
