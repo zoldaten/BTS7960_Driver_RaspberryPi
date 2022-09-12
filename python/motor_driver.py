@@ -104,3 +104,13 @@ class Drivers():
         time.sleep(.5);
         self.lpwm_D1.ChangeDutyCycle(0)
         self.lpwm_D2.ChangeDutyCycle(0)
+
+    def Test_All(self):
+        print("Testing backward movement")
+        self.Backward()
+        print("Testing Forward movement")
+        self.Forward()
+        print("Testing Left movement");
+        self.Rotate_Left();
+        print("Testing Rigth movement");
+        self.Rotate_Right()
