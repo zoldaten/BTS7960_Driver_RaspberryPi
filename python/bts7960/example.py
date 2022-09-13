@@ -1,6 +1,6 @@
-import bts7960
+import motor_driver as md
 import time
-MOV = bts7960.Drivers();
+MOV = md.Drivers();
 
 
 MOV.Test_All();
