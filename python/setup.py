@@ -7,7 +7,7 @@ setup(
     description="Gpio program to controll the BTS7960 of a robotics project",
     author="Louis Castro",
     author_email="castrolwilliam@gmail.com",
-    packages=find_packages(include=['lib','lib.*']),
+    packages=find_packages(include=['bts7960','bts7960.*']),
     install_requires=[
         'RPi.GPIO'
     ]
