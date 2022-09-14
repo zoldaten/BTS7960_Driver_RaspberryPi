@@ -73,26 +73,26 @@ class Drivers():
     def Forward(self):
         self.rpwm_D1.ChangeDutyCycle(100)
         self.rpwm_D2.ChangeDutyCycle(100)
-        time.sleep(.5);
+        time.sleep(.125);
         self.rpwm_D1.ChangeDutyCycle(0)
         self.rpwm_D2.ChangeDutyCycle(0)
     
     def Rotate_Right(self):
         self.rpwm_D2.ChangeDutyCycle(100)
-        time.sleep(.5)
+        time.sleep(.125)
         self.rpwm_D2.ChangeDutyCycle(0)
         
     
     def Rotate_Left(self):
         self.rpwm_D1.ChangeDutyCycle(100)
-        time.sleep(.5)
+        time.sleep(.125)
         self.rpwm_D1.ChangeDutyCycle(0)
         
         
     def Backward(self):
         self.lpwm_D1.ChangeDutyCycle(100)
         self.lpwm_D2.ChangeDutyCycle(100)
-        time.sleep(.5);
+        time.sleep(.125);
         self.lpwm_D1.ChangeDutyCycle(0)
         self.lpwm_D2.ChangeDutyCycle(0)
 
