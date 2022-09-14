@@ -1,7 +1,7 @@
 import socket 
 import sys
 import netifaces as ni
-import motor_driver as md
+import bts7960 as md
 class Server:
     def __init__(self):
         self.IP = self.get_ip();
