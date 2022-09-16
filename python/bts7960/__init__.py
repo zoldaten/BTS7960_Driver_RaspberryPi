@@ -6,20 +6,20 @@ class Drivers():
     def __init__(self):
         
         #Enable forward motor on the drivers
-        self.D1_R_EN = 20;
-        self.D2_R_EN = 13
+        self.D1_R_EN = 13;
+        self.D2_R_EN = 16;
 
         #Enable revers motor on the drivers
-        self.D1_L_EN = 21;
-        self.D2_L_EN = 6;
+        self.D1_L_EN = 6;
+        self.D2_L_EN = 12;
 
         #Forward & Backward for Driver 1
-        self.D1_RPWM = 19;
-        self.D1_LPWM = 26;
+        self.D1_RPWM = 26;
+        self.D1_LPWM = 19;
 
         #Forward & Backward for Driver 2
-        self.D2_RPWM = 16;
-        self.D2_LPWM = 12;
+        self.D2_RPWM = 21;
+        self.D2_LPWM = 20;
 
 #       Define all parameters for the drivers
         self.GPIO_PARAMETERS();
