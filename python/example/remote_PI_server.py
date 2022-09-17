@@ -4,7 +4,7 @@ import netifaces as ni
 import bts7960 as md
 class Server:
     def __init__(self):
-        self.IP = self.get_ip();
+        self.IP = "enter ip" #self.get_ip();
         self.port = 100;
         self.s = ""
         self.cli_socket = ""
