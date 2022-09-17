@@ -8,9 +8,9 @@ sudo python3 test.py
 
 
 
-### To run remote_PI_server.py & remote_PI_clinet.py
+# To run remote_PI_server.py & remote_PI_clinet.py
 
-The remote_PI_server.py run on the raspberry pi 
+### The remote_PI_server.py run on the raspberry pi 
 
 
 First you need to seet the socket server ip 
@@ -29,3 +29,14 @@ to write ip address to the variable call(SELF.IP = "10.0.0.7")
   <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/Screenshot%20from%202022-09-17%2013-44-19.png" width="350" />
 
 </p>
+
+
+### The remote_PI_client.py run on the client or desktop
+
+First you need to seet the socket the client is goint to connect to
+
+<p align="center">
+  <img src="" width="350" />
+
+</p>
+  In the (Line 21) write the ip address as (self.address = "IP",100) Enter the raspberry pi address.
