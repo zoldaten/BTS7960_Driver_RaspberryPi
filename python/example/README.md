@@ -58,3 +58,12 @@ now run the client side
 ```
 sudo python3 remote_PI_client.py
 ```
+
+
+
+### DEMO GIF Record screen & power chair movement
+
+<p align="center">
+
+
+</p>
