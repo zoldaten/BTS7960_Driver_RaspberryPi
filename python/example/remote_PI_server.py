@@ -52,8 +52,8 @@ class Server:
                 break;
 
         #GET INTERFACE  IP ADDRESS
-        #ip = ni.ifaddresses(interface_name)[ni.AF_INET][0]['addr']
-        ip = "192.168.0.9"
+        ip = ni.ifaddresses(interface_name)[ni.AF_INET][0]['addr']
+        #ip = "192.168.0.9"
         #RETURN THE IP ADDRESS
         return ip
 
