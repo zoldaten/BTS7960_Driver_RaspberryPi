@@ -18,27 +18,27 @@ raspberry pi pin mode is BCM
 
 ## This are the pin for Driver 1 
 
-* BCM pin (20) = Driver pin (R_EN) 
+* BCM pin (13) = Driver pin (R_EN) 
 
-* BCM pin (21) = Driver pin (L_EN)
+* BCM pin (6) = Driver pin (L_EN)
              
-### This are the Movement pin 
+### This are the Movement pin  for Driver 1
 
-* BCM pin (19) = Driver pin (RPWM)
+* BCM pin (26) = Driver pin (RPWM)
 
-* BCM pin (26) = Driver pin (LPWM)
+* BCM pin (19) = Driver pin (LPWM)
              
 ## This are the pin for Driver 2
 
-* BCM pin (13) = Driver pin (R_EN)
+* BCM pin (16) = Driver pin (R_EN)
 
-* BCM pin (6) = Driver pin (L_EN)
+* BCM pin (12) = Driver pin (L_EN)
 
-### This are movement pin
+### This are movement pin for Driver 2
 
-* BCM pin (16) = Driver pin (RPWM)
+* BCM pin (21) = Driver pin (RPWM)
 
-* BCM pin (12) = Driver pin (LPWM)
+* BCM pin (20) = Driver pin (LPWM)
              
 <p align="center">
   <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/rsp.png" width="400" />
