@@ -65,5 +65,6 @@ sudo python3 remote_PI_client.py
 
 <p align="center">
 
+  <img src="" width="350" />
 
 </p>
