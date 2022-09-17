@@ -22,6 +22,7 @@ and saving the return value to variable (ip)
 </p>
 
 another way to set server socket ip is 
+to write ip address to the variable call(SELF.IP = "10.0.0.7"
 
 <p align="center">
 
