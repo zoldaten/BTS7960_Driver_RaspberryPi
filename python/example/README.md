@@ -36,7 +36,25 @@ to write ip address to the variable call(SELF.IP = "10.0.0.7")
 First you need to seet the socket the client is goint to connect to
 
 <p align="center">
-  <img src="" width="350" />
+  <img src="https://raw.githubusercontent.com/The-GUY-2024/BTS7960_Driver/main/src/Screenshot%20from%202022-09-17%2014-02-28.png" width="350" />
 
 </p>
   In the (Line 21) write the ip address as (self.address = "IP",100) Enter the raspberry pi address.
+  
+ ### Before running remote_PI_client.py
+ install pygame before you run the remote_PI_client.py
+ ```
+   sudo pip3 install pygame
+ ```
+
+Start the server in the raspberry pi by running 
+
+```
+sudo python3 remote_PI_server.py
+```
+
+now run the client side 
+
+```
+sudo python3 remote_PI_client.py
+```
