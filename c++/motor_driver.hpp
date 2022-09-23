@@ -10,6 +10,7 @@ namespace bts7960{
     class Driver{
         public:
             void Test(){
+                Initiate_Drivers();
             }
         private:
         //Driver Gpio Declaration
@@ -49,7 +50,7 @@ namespace bts7960{
             int lpwm_d2;
 
         //Gpio initiation and setup declaration
-            void Initiate_Pin(){
+            void Initiate_Drivers(){
                 wiringPiSetup();
                 
                 //Enable all pins of driver 1
@@ -77,6 +78,7 @@ namespace bts7960{
                 //create the pwm for the driver's
                 //DRIVER 1
                 rpwm_d1 = softPwmCreate(D1_RPWM, 0,100);
+                std::cout << "Driver 1 forward: " << rpwm_d1 << std::endl;
                 lpwm_d1 = softPwmCreate(D1_LPWM, 0, 100);
 
                 //DRIVER 2
