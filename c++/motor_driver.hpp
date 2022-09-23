@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <cstdlib>
 
 namespace bts7960{
     
@@ -11,7 +11,30 @@ namespace bts7960{
         public:
             void Test(){
                 Initiate_Drivers();
+                delay(1000);
+                Forward();
+                delay(1000);
+                Backward();
             }
+
+            void Forward(){
+                softPwmWrite(D1_RPWM, 40);
+                softPwmWrite(D2_RPWM, 40);
+                delay(750);
+                softPwmStop(D1_RPWM);
+                softPwmStop(D2_RPWM);
+
+            }
+
+            void Backward(){
+                softPwmWrite(D1_LPWM, 40);
+                softPwmWrite(D2_LPWM, 40);
+                delay(750);
+                softPwmStop(D1_LPWM);
+                softPwmStop(D2_LPWM);
+
+            }
+
         private:
         //Driver Gpio Declaration
 //################################################
@@ -78,14 +101,44 @@ namespace bts7960{
                 //create the pwm for the driver's
                 //DRIVER 1
                 rpwm_d1 = softPwmCreate(D1_RPWM, 0,100);
-                std::cout << "Driver 1 forward: " << rpwm_d1 << std::endl;
+                
+                //check for error at the creation of the rpwm_d1 
+                error_gpio(rpwm_d1, D1_RPWM);
+                
                 lpwm_d1 = softPwmCreate(D1_LPWM, 0, 100);
+
+                //Check for the error at the creation of the lpwm_d1
+                error_gpio(lpwm_d1, D1_LPWM);
 
                 //DRIVER 2
                 rpwm_d2 = softPwmCreate(D2_RPWM, 0, 100);
-                lpwm_d2 = softPwmCreate(D1_LPWM, 0, 100);
+
+                //Check for the error at the creation of the rpwm_d2
+                error_gpio(rpwm_d2, D2_RPWM);
+
+                lpwm_d2 = softPwmCreate(D2_LPWM, 0, 100);
+
+                //Check for the error at the creation of the lpwm_d2
+                error_gpio(lpwm_d2, D2_LPWM);
+
             }
 
+            
+
+            //Check for error at the pwm pin declaration
+            void error_gpio(int pwm_value, int Pin){
+                if (pwm_value != 0)
+                {
+                    std::cout << "The pwm pin was not succesfully creatd for the " << Pin << "return value was: " << pwm_value << std::endl;
+
+                    exit(EXIT_FAILURE);
+                }
+
+                if (pwm_value == 0 ){
+                    std::cout << "pwm pin was succesfully created for: " << Pin << " return value was: " << pwm_value << std::endl;  
+                }
+
+            }
 
             void CleanUp(){
 
