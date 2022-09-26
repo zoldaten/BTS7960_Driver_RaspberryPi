@@ -1,4 +1,4 @@
-# Simple example to test the bts7960 drivers
+# Simple example to test the bts7960 driver
 
 ### To run test.py 
 
