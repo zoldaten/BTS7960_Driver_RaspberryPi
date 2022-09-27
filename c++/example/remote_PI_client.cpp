@@ -12,6 +12,8 @@
 #include <sstream>
 #include <string>
 #include <arpa/inet.h>
+#include <chrono>
+#include <thread>
 
 //First task create glfw window
 
@@ -30,9 +32,9 @@ class Client {
         glfw_parameters();
 
         Socket_param();
-
+        
         while(!glfwWindowShouldClose(window)){
-
+            std::this_thread::sleep_for(std::chrono::milliseconds(125)); 
             
             Keyboard_Input();
             glfwSwapBuffers(window);
@@ -58,7 +60,7 @@ class Client {
         socklen_t addrLen = sizeof(struct sockaddr_in);
 
         //Declaring the server IP ADDRESS & PORT
-        char Ip[15] = "";
+        char Ip[15] = "192.168.0.6";
         int port = 100;
 
 
