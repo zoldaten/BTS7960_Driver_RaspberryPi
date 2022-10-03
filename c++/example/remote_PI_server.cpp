@@ -22,7 +22,34 @@ class Server {
 
                 rcv_msg();
 
+
                 std::cout << DATA.msg <<std::endl;
+           
+                if(DATA.msg == 1 ){
+                    std::cout << "Forward" << std::endl;
+
+
+                }
+
+
+                if (DATA.msg == 2 ){
+                    std::cout << "Backward" << std::endl;
+
+
+                }
+
+                if (DATA.msg == 3 ){
+                    std::cout << "Right " << std::endl;
+
+
+                }
+
+                if (DATA.msg == 4){
+                    std::cout << "Left " << std::endl;
+
+
+                }
+
             }
 
 
