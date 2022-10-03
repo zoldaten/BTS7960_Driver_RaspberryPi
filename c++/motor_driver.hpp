@@ -13,23 +13,35 @@ namespace bts7960{
                 Initiate_Drivers();
                 delay(1000);
                 Forward();
-                delay(1000);
+                delay(5000);
                 Backward();
             }
 
             void Forward(){
                 softPwmWrite(D1_RPWM, 40);
                 softPwmWrite(D2_RPWM, 40);
-                delay(750);
+                delay(125);
                 softPwmStop(D1_RPWM);
                 softPwmStop(D2_RPWM);
 
             }
+            void Left(){
+                softPwmWrite(D1_RPWM,40);
+                delay(125);
+                softPwmStop(D1_RPWM);
+            }
+
+            void Rigth(){
+                softPwmWrite( D2_RPWM, 40);
+                delay(125);
+                softPwmStop(D2_RPWM);
+            }
+
 
             void Backward(){
                 softPwmWrite(D1_LPWM, 40);
                 softPwmWrite(D2_LPWM, 40);
-                delay(750);
+                delay(125);
                 softPwmStop(D1_LPWM);
                 softPwmStop(D2_LPWM);
 
