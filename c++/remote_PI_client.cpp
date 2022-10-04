@@ -61,7 +61,7 @@ class Client {
         socklen_t addrLen = sizeof(struct sockaddr_in);
 
         //Declaring the server IP ADDRESS & PORT
-        char Ip[15] = "192.168.0.7";
+        char Ip[15] = "192.168.0.6";
         int port = 100;
 
 
