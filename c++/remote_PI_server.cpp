@@ -15,6 +15,15 @@
 class Server {
     public:
         int main(){
+            std::cout << "Testing motor drivers" << std::endl;
+
+            Md.Test();
+
+
+
+            std::cout << "Calling sockets parameters" << std::endl;
+
+
             Call_socket();
 
             while (true){
