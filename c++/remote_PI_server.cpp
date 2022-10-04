@@ -10,8 +10,7 @@
 #include <sstream>
 #include <string>
 #include <arpa/inet.h>
-
-
+#include "motor_driver.hpp"
 
 class Server {
     public:
@@ -28,25 +27,31 @@ class Server {
                 if(DATA.msg == 1 ){
                     std::cout << "Forward" << std::endl;
 
-
+                    Md.Forward();
                 }
 
 
                 if (DATA.msg == 2 ){
                     std::cout << "Backward" << std::endl;
-
+                    Md.Backward();
 
                 }
 
                 if (DATA.msg == 3 ){
                     std::cout << "Right " << std::endl;
 
+                    Md.Rigth();
 
                 }
 
                 if (DATA.msg == 4){
                     std::cout << "Left " << std::endl;
 
+                    Md.Left();
+                }
+                if(DATA.esc == "C"){
+                    std::cout << "Closing system" << std::endl;
+                    Close_socket();
 
                 }
 
@@ -78,9 +83,14 @@ class Server {
 
         //Message memory declaration
         struct MSG {
-            int msg; 
+            int msg;
+            std::string esc; 
         };
         MSG DATA;
+
+        //Declaring motor driver 
+        bts7960::Driver Md;
+
 
         //Recive Message from client 
         void rcv_msg(){

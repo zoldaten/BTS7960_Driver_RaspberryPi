@@ -52,6 +52,7 @@ class Client {
     private:
         struct MSG{
             int msg;
+            std::string esc;
         };
         MSG DATA;
         //socket client parameters 
@@ -91,10 +92,17 @@ class Client {
         // If Esc press by user close window and socket
         if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         {
-            glfwSetWindowShouldClose(window, true);
             std::cout << " Exting window " << std::endl;
 
-            //Close socket 
+            //Send closing socke message 
+            DATA.esc = "C";
+
+            Send_msg();
+            
+            //Close glfw window
+            glfwSetWindowShouldClose(window, true);
+            
+
         }
 
         //DETECTING ARROW KEYS
