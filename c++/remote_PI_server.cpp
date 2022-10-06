@@ -58,7 +58,7 @@ class Server {
 
                     Md.Left();
                 }
-                if(DATA.esc == "C"){
+                if(DATA.msg == 5){
                     std::cout << "Closing system" << std::endl;
                     Close_socket();
 
@@ -74,7 +74,7 @@ class Server {
 
 
         //ip address
-        char ip[20] = "192.168.0.6";
+        char ip[20] = "192.168.0.5";
         //Port number 
         int port = 100;
 
@@ -93,7 +93,6 @@ class Server {
         //Message memory declaration
         struct MSG {
             int msg;
-            std::string esc; 
         };
         MSG DATA;
 

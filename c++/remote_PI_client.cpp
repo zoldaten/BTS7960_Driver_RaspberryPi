@@ -52,7 +52,6 @@ class Client {
     private:
         struct MSG{
             int msg;
-            std::string esc;
         };
         MSG DATA;
         //socket client parameters 
@@ -61,7 +60,7 @@ class Client {
         socklen_t addrLen = sizeof(struct sockaddr_in);
 
         //Declaring the server IP ADDRESS & PORT
-        char Ip[15] = "192.168.0.6";
+        char Ip[15] = "192.168.0.5";
         int port = 100;
 
 
@@ -95,7 +94,7 @@ class Client {
             std::cout << " Exting window " << std::endl;
 
             //Send closing socke message 
-            DATA.esc = "C";
+            DATA.msg = 5;
 
             Send_msg();
             
