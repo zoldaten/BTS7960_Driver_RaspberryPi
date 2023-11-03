@@ -49,17 +49,13 @@ class Drivers():
         gpio.setup(self.D1_L_EN, gpio.OUT)
         gpio.setup(self.D1_R_EN, gpio.OUT)
 
-
-
         #Enable the DRIVER 2 PINS
         gpio.setup(self.D2_RPWM, gpio.OUT)
         gpio.setup(self.D2_R_EN, gpio.OUT)
         gpio.setup(self.D2_L_EN, gpio.OUT)
         gpio.setup(self.D2_LPWM, gpio.OUT)
 
-
-        #Enable Left & Right mpvement 
-
+        #Enable Left & Right mpvement
         #DRIVER 1
         gpio.output(self.D1_L_EN, True)
         gpio.output(self.D2_L_EN, True)
@@ -67,34 +63,42 @@ class Drivers():
         gpio.output(self.D2_R_EN, True)
 
 
-
-
-
-    def Forward(self):
-        self.rpwm_D1.ChangeDutyCycle(50)
-        self.rpwm_D2.ChangeDutyCycle(50)
-        time.sleep(.15);
-        self.rpwm_D1.ChangeDutyCycle(0)
-        self.rpwm_D2.ChangeDutyCycle(0)
-    
-    def Rotate_Right(self):
-        self.rpwm_D2.ChangeDutyCycle(50)
-        time.sleep(.15)
-        self.rpwm_D2.ChangeDutyCycle(0)
+    def Backward(self, speed):
+        self.rpwm_D1.ChangeDutyCycle(speed)
+        self.rpwm_D2.ChangeDutyCycle(speed)
+        #time.sleep(.15)
+        #self.rpwm_D1.ChangeDutyCycle(0)
+        #self.rpwm_D2.ChangeDutyCycle(0)
+        
+           
+    #def Rotate_Right(self):
+        #self.rpwm_D2.ChangeDutyCycle(50)
+        #time.sleep(.15)
+        #self.rpwm_D2.ChangeDutyCycle(0)
         
     
-    def Rotate_Left(self):
-        self.rpwm_D1.ChangeDutyCycle(50)
-        time.sleep(.15)
-        self.rpwm_D1.ChangeDutyCycle(0)
+    #def Rotate_Left(self):
+        #self.rpwm_D1.ChangeDutyCycle(50)
+        #time.sleep(.15)
+        #self.rpwm_D1.ChangeDutyCycle(0)
         
         
-    def Backward(self):
-        self.lpwm_D1.ChangeDutyCycle(50)
-        self.lpwm_D2.ChangeDutyCycle(50)
-        time.sleep(.15);
+    def Forward(self,speed):
+        self.lpwm_D1.ChangeDutyCycle(speed)
+        self.lpwm_D2.ChangeDutyCycle(speed)
+        #time.sleep(.15)
+        #self.lpwm_D1.ChangeDutyCycle(0)
+        #self.lpwm_D2.ChangeDutyCycle(0)
+
+   
+        
+    def Stop(self):
         self.lpwm_D1.ChangeDutyCycle(0)
         self.lpwm_D2.ChangeDutyCycle(0)
+        self.rpwm_D1.ChangeDutyCycle(0)
+        self.rpwm_D2.ChangeDutyCycle(0)
+        time.sleep(.15)
+    
 
     def Test_All(self):
         print("Testing backward movement")
